@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.video-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery-video {
+    width: 100vw; /* 화면 너비 전체를 사용 */
+    height: 100vh; /* 화면 높이 전체를 사용 */
+    margin-right: 10px; /* 동영상 간 간격 설정 */
+    transition: margin-right 1s ease; /* 천천히 이동하는 효과 설정 */
+}
+

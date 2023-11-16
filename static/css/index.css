@@ -115,14 +115,47 @@ body {
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: 2px;
   overflow: hidden;
-  padding: 20px;
-  font-size: 0;
+  padding: 30px;
+  font-size: 10;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: nowrap; /* 가로로 강제로 한 줄에 배치 */
+  overflow-x: auto; 
 }
 
+
+.results-carousel .video-wrapper {
+  width: 100%; /* 비디오 크기 조절 */
+  margin: 1px;
+  text-align: center;
+}
+
+.results-carousel .video-caption {
+  margin-top: 1px;
+  font-size: 20px;
+  font-family: 'Comic Mono', Times, serif; /* Times New Roman 글꼴 적용 */
+  font-style: italic;
+}
+
+.results-carousel .video-caption .highlight-text {
+  color: red; /* 빨간색으로 지정 */
+}
+
+/* .carousel-item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 50px;
+  font-size: 10;
+  flex-wrap: wrap;
+  display: flex;
+  flex-wrap: nowrap; /* 가로로 강제로 한 줄에 배치 */
+  overflow-x: auto; 
+} */
+
 .results-carousel video {
-  margin: 0;
+  margin: 1;
 }
 
 .slider-pagination .slider-page {
@@ -133,5 +166,26 @@ body {
   font-size: smaller;
 }
 
+.tldr{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
+.tldr item{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
+.highlight{
+  transition:top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+  background-color: rgba(225, 166, 121, 0.5);
+  background-color: rgba(255,211,30, 0.4);
+}
+
+.underline{
+  text-decoration: underline;
+}

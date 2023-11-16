@@ -50,7 +50,7 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <!-- <div class="navbar-menu">
+  <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://keunhong.com">
       <span class="icon">
@@ -79,7 +79,7 @@
       </div>
     </div>
 
-  </div> -->
+  </div>
 </nav>
 
 
@@ -88,11 +88,11 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ED-NeRF: Efficient Text-Guided Editing of 3D Scene With Latent Space NeRF</h1>
+          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a >Anonymous Authors</a><sup></sup>,</span>
-            <!-- <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
               <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
@@ -108,18 +108,18 @@
             </span>
             <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span> -->
+            </span>
           </div>
 
-          <!-- <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Washington,</span>
             <span class="author-block"><sup>2</sup>Google Research</span>
-          </div> -->
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href="https://arxiv.org/pdf/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -136,9 +136,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Video Link. -->
-              <!-- <span class="link-block">
+              <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -146,7 +146,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
@@ -158,14 +158,14 @@
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <!-- <span class="link-block"> -->
-                <!-- <a href="https://github.com/google/nerfies/releases/tag/0.1"
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a> -->
+                  </a>
             </div>
 
           </div>
@@ -178,12 +178,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src="./static/videos/teaser.mp4"
                 type="video/mp4">
-      </video> -->
+      </video>
       <h2 class="subtitle has-text-centered">
-        TL;DR: Edit NeRF via text prompt using Stable Diffusion, with in a short training time and very low GPU consumption.
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
       </h2>
     </div>
   </div>
@@ -194,27 +196,27 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
+        <div class="item item-hat">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/a_camo_round_hat.mp4"
+            <source src="./static/videos/steve.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-chair-tp">
           <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/a_gold_round_hat.mp4"
+            <source src="./static/videos/chair-tp.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/a_silver_round_hat.mp4"
+            <source src="./static/videos/shiba.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-fullbody">
           <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/a_white_round_hat.mp4"
+            <source src="./static/videos/fullbody.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -256,23 +258,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recently, there has been a significant advancement in text-to-image diffusion models, 
-            leading to groundbreaking performance in 2D image generation. These advancements have been 
-            extended to 3D models, enabling the generation of novel 3D objects from textual descriptions. 
-            This has evolved into NeRF editing methods, which allow the manipulation of existing 3D 
-            objects through textual conditioning. However, existing NeRF editing techniques have faced 
-            limitations in their performance due to slow training speeds and the use of loss functions 
-            that do not adequately consider editing. To address this, here we present a novel 3D NeRF 
-            editing approach dubbed <b>ED-NeRF</b> by successfully embedding real-world scenes into the latent 
-            space of the latent diffusion model (LDM) through a unique refinement layer. 
-            This approach enables us to obtain a NeRF backbone that is not only faster but also more 
-            amenable to editing compared to traditional image space NeRF editing. 
-            Furthermore, we propose an improved loss function tailored for editing by migrating the 
-            delta denoising score (DDS) distillation loss, originally used in 2D image editing to the 
-            three-dimensional domain. This novel loss function surpasses the well-known score distillation 
-            sampling (SDS) loss in terms of suitability for editing purposes. Our experimental results 
-            demonstrate that <b>ED-NeRF</b> achieves faster editing speed while producing improved output quality 
-            compared to state-of-the-art 3D editing models.</p>
+            We present the first method capable of photorealistically reconstructing a non-rigidly
+            deforming scene using photos/videos captured casually from mobile phones.
+          </p>
+          <p>
+            Our approach augments neural radiance fields
+            (NeRF) by optimizing an
+            additional continuous volumetric deformation field that warps each observed point into a
+            canonical 5D NeRF.
+            We observe that these NeRF-like deformation fields are prone to local minima, and
+            propose a coarse-to-fine optimization method for coordinate-based models that allows for
+            more robust optimization.
+            By adapting principles from geometry processing and physical simulation to NeRF-like
+            models, we propose an elastic regularization of the deformation field that further
+            improves robustness.
+          </p>
+          <p>
+            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
+            photos/videos into deformable NeRF
+            models that allow for photorealistic renderings of the subject from arbitrary
+            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
+            using a
+            rig with two mobile phones that take time-synchronized photos, yielding train/validation
+            images of the same pose at different viewpoints. We show that our method faithfully
+            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
+            fidelity.
+          </p>
         </div>
       </div>
     </div>
